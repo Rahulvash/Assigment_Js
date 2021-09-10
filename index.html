@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div id="input-section">
+        <h1>Welcome to the Quiz</h1>
+        <label>
+            Enter the number of questions
+        </label>
+        <input type="number" oninput="questionCount(event)">
+        <button class="btn quizArenaButton" onclick="quizArena()" disabled>Enter Quiz Arena</button>
+    </div>
+    <div class="hide" id="quiz-container">
+        <div class="container" id="container-one">
+            <div id="container-one-question-container" class="hide">
+                <div class="question">Question</div>
+                <input type="text" class="answer" maxlength="4" >
+            </div>
+            <div class="controls">
+                <button id="container-one-start-btn" class="start-btn btn" onclick="startClicked('container-one')">Start
+                    Quiz</button>
+                <button id="container-one-next-btn" class="next-btn btn hide"
+                    onclick="nextClicked('container-one')">Next</button>
+                <button id="container-one-show-result-btn" class="show-result-btn btn hide"
+                    onclick="showResult('container-one')">Show Result</button>
+            </div>
+            <div id="container-one-answer-container" class="hide">
+            </div>
+            <div class="result result-one" id="container-one-result">
+            </div>
+
+        </div>
+        <div class="container" id="container-second">
+            <div id="container-second-question-container" class="hide">
+                <div class="question">Question</div>
+
+                <input type="text" class="answer" maxlength="4">
+
+            </div>
+            <div class="controls">
+                <button id="container-second-start-btn" class="start-btn btn"
+                    onclick="startClicked('container-second')">Start Quiz</button>
+                <button id="container-second-next-btn" class="next-btn btn hide"
+                    onclick="nextClicked('container-second')">Next</button>
+                <button id="container-second-show-result-btn" class="show-result-btn btn hide"
+                    onclick="showResult('container-second')">Show Result</button>
+            </div>
+            <div id="container-second-answer-container" class="hide"></div>
+            <div class="result result-second" id="container-second-result">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
