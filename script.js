@@ -62,7 +62,7 @@ const calculateResult = (num1, num2, operator) => {
         case '*':
             return num1 * num2;
         case '/':
-            return (num1 / num2).toFixed(2);
+            return +(num1 / num2).toFixed(2);
     }
 }
 
@@ -83,7 +83,7 @@ const generateQuestion = (id) => {
 const checkAnswer = (ans, index, id) => {
     if (id === 'container-one') {
         const { answer } = result1[index];
-        if (answer === ans) {
+        if (answer === +ans) {
             result1[index].corrected = true;
             score1++;
         }
@@ -92,7 +92,7 @@ const checkAnswer = (ans, index, id) => {
     }
     else {
         const { answer } = result2[index];
-        if (answer == ans) {
+        if (answer === +ans) {
             result2[index].corrected = true;
             score2++;
         }
