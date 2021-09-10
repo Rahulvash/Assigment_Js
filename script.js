@@ -83,7 +83,7 @@ const generateQuestion = (id) => {
 const checkAnswer = (ans, index, id) => {
     if (id === 'container-one') {
         const { answer } = result1[index];
-        if (answer == ans) {
+        if (answer === ans) {
             result1[index].corrected = true;
             score1++;
         }
